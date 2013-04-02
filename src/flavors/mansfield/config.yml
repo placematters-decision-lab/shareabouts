@@ -110,7 +110,7 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Add a location)
+  add_button_label: _(Add a Place)
   action_text: _(added)
   title: _(Tell us about this place...)
   action_text: _(added)
