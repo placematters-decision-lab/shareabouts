@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Oleo+Script:400,700);
+@import url(//fonts.googleapis.com/css?family=Oleo+Script:400,700);
+@import url(//fonts.googleapis.com/css?family=Telex);
 
 /*
  * This CSS file follows the default Shareabouts style.css.
@@ -47,7 +48,7 @@ a:hover {
  * as to not break it scaling via media queries. */
 
 #site-title {
-  font-family: 'Oleo Script', Helvetica, sans-serif;
+  font-family: 'Telex', Helvetica, sans-serif;
 /*  text-shadow: none;*/
 }
 
@@ -107,7 +108,7 @@ a#nav-bttn:hover {
 -------------------------------------------------------------- */
 
 a.add-place {
-  font-family: 'Oleo Script', Helvetica, sans-serif;
+  font-family: 'Telex', Helvetica, sans-serif;
   border-radius: 10px;
   background-color: #9966CC;
   text-shadow: 1px -1px 0 rgba(0,0,0,0.25);
