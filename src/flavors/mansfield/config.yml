@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Walk Philly | Mapping Pedestrian Obstacles
+  title: Mansfield Tomorrow | Mapping Places to Preserve and Change
   # Header name
-  name: Walk Philly
+  name: Mansfield Tomorrow
   # Meta description that will show up in Google search results
-  meta_description: _(Walk Philly is a tool to crowdsource pedestrian obstacles in Philadelphia. It is powered by Shareabouts, a mapping tool to gather public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  meta_description: _(Mansfield Tomorrow is a process for planning the future of Mansfield. This map is a tool to add places you want to preserve and change. It is powered by Shareabouts, a mapping tool to gather public input. Use it to collect suggested locations and comments in a social, engaging process.)
 
 # Settings for map and layer configs
 map:
@@ -26,10 +26,18 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  obstacle:
+  Preserve:
     default: dot
     focused: marker
-    label: _(obstacle)
+    label: _(preserve)
+  Change:
+    default: dot
+    focused: marker
+    label: _(change)
+  Comment:
+    default: dot
+    focused: marker
+    label: _(comment)
 
 # Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
 # for documention of each property. Any omitted property will be undefined.
@@ -64,33 +72,36 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Add Something)
+  add_button_label: _(Add a location)
   action_text: _(added)
-  title: _(Snap a photo of the pedestrian obstacle...)
-  action_text: _(reported)
+  title: _(Tell us about this place...)
+  action_text: _(added)
   anonymous_name: _(Someone)
   submit_button_label: _(Save)
   items:
-    - name: location_type
-      type: hidden
-      attrs:
-        - key: value
-          value: obstacle
-    - inputfile_label: _(Add an Image)
-      type: file
-      name: my_image
-      attrs:
-        - key: accept
-          value: image/*
-        - key: required
-          value: required
-    - prompt: _(Description)
+    - prompt: _(Place Name)
+      name: name
       type: text
-      name: description
-      optional: true
+      optional: false
       attrs:
         - key: placeholder
-          value: _(Description)
+          value: _(Place Name)
+    - prompt: _(Location Type)
+      name: location_type
+      type: select
+      options:
+        - Preserve
+        - Change
+        - Comment
+    - prompt: _(Description)
+      type: textarea
+      name: description
+      optional: false
+      attrs:
+        - key: placeholder
+          value: _(Tell us more about this location...)
+        - key: rows
+          value: 3
     - prompt: _(Your Name)
       type: text
       name: submitter_name
@@ -100,6 +111,14 @@ place:
           value: _(Name)
         - key: size
           value: 30
+    - inputfile_label: _(Add an Image)
+      type: file
+      name: my_image
+      attrs:
+        - key: accept
+          value: image/*
+        - key: required
+          value: required
 
 survey:
   submission_type: comments
