@@ -26,32 +26,70 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  Preserve:
-    default: dot
-    focused: marker
-    label: _(preserve)
-  Change:
-    default: dot
-    focused: marker
-    label: _(change)
+  Great Place:
+    default: green_feature
+    focused: green_focused
   Comment:
-    default: dot
-    focused: marker
-    label: _(comment)
+    default: yellow_feature
+    focused: yellow_focused
+    label: _(comment on a place)
+  Problem Place:
+    default: red_feature
+    focused: red_focused
 
 # Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
 # for documention of each property. Any omitted property will be undefined.
 place_type_icons:
-  dot:
-    iconUrl: /static/css/images/markers/dot-744edc.png
+  yellow_feature:
+    iconUrl: /static/css/images/feature-point-yellow.png
     iconSize:
       width: 17
       height: 18
     iconAnchor:
       x: 9
       y: 9
-  marker:
-    iconUrl: /static/css/images/markers/marker-744edc.png
+  red_feature:
+    iconUrl: /static/css/images/feature-point-red.png
+    iconSize:
+      width: 17
+      height: 18
+    iconAnchor:
+      x: 9
+      y: 9
+  green_feature:
+    iconUrl: /static/css/images/feature-point-green.png
+    iconSize:
+      width: 17
+      height: 18
+    iconAnchor:
+      x: 9
+      y: 9
+  yellow_focused:
+    iconUrl: /static/css/images/marker-focused-yellow.png
+    shadowUrl: /static/css/images/marker-shadow.png
+    iconSize:
+      width: 25
+      height: 41
+    shadowSize:
+      width: 41
+      height: 41
+    iconAnchor:
+      x: 12
+      y: 41
+  red_focused:
+    iconUrl: /static/css/images/marker-focused-red.png
+    shadowUrl: /static/css/images/marker-shadow.png
+    iconSize:
+      width: 25
+      height: 41
+    shadowSize:
+      width: 41
+      height: 41
+    iconAnchor:
+      x: 12
+      y: 41
+  green_focused:
+    iconUrl: /static/css/images/marker-focused-green.png
     shadowUrl: /static/css/images/marker-shadow.png
     iconSize:
       width: 25
@@ -90,8 +128,8 @@ place:
       name: location_type
       type: select
       options:
-        - Preserve
-        - Change
+        - Great Place
+        - Problem Place
         - Comment
     - prompt: _(Description)
       type: textarea
@@ -117,8 +155,6 @@ place:
       attrs:
         - key: accept
           value: image/*
-        - key: required
-          value: required
 
 survey:
   submission_type: comments
