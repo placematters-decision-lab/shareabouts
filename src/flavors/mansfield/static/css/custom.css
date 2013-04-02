@@ -18,11 +18,11 @@ body, select, input, textarea {
 -------------------------------------------------------------- */
 
 a, a:active, a:visited {
-  color: #9966CC;
+  color: #354717;
 }
 
 a:hover {
-  color: #663399;
+  color: #B2D080;
 }
 
 
@@ -30,10 +30,11 @@ a:hover {
 -------------------------------------------------------------- */
 
 #site-header {
-  background-color: #666699;
+  background-color: #94C73F;
 }
 
 #site-header a, #site-header a:active, #site-header a:visited {
+	color: #fff;
 }
 
 #site-header a:hover {
@@ -91,12 +92,12 @@ a#nav-bttn:hover {
 }
 
 .access li {
-  border-bottom: 2px solid #666699;
+  border-bottom: 2px solid #94C73F;
 }
 
 .access a:hover {
   color: #fff;
-  background: #aa77dd;
+  background: #354717;
 }
 
 .access a:visited, .access a:active, .access a:link {
@@ -110,7 +111,7 @@ a#nav-bttn:hover {
 a.add-place {
   font-family: 'Telex', Helvetica, sans-serif;
   border-radius: 10px;
-  background-color: #9966CC;
+  background-color: #94C73F;
   text-shadow: 1px -1px 0 rgba(0,0,0,0.25);
   color: #eee;
 }
@@ -137,7 +138,7 @@ textarea {
 
 .bttn {
   border-radius: 10px;
-  background-color: #96C;
+  background-color: #94C73F;
   text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -223,7 +224,7 @@ a.reply-link:hover {
 -------------------------------------------------------------- */
 
 #ticker {
-  background-color: #555577;
+  background-color: #354717;
 }
 
 ul.recent-points {
