@@ -25,6 +25,7 @@ coverage.data
 env/
 .env/
 .project
+.pydevproject
 
 # Local project settings
 src/project/local_settings.py
