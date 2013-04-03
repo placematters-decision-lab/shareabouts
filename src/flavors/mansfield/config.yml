@@ -3,7 +3,7 @@ app:
   # HTML Title
   title: Mansfield Tomorrow | Mapping Places to Preserve and Change
   # Header name
-  name: Mansfield Tomorrow
+  #name: Mansfield Tomorrow
   # Meta description that will show up in Google search results
   meta_description: _(Mansfield Tomorrow is a process for planning the future of Mansfield. This map is a tool to add places you want to preserve and change. It is powered by Shareabouts, a mapping tool to gather public input. Use it to collect suggested locations and comments in a social, engaging process.)
 

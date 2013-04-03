@@ -30,14 +30,16 @@ a:hover {
 -------------------------------------------------------------- */
 
 #site-header {
-  background-color: #94C73F;
+  background:url('MansfieldTomorrow.png') no-repeat;
+  background-color: #FFF;
 }
 
 #site-header a, #site-header a:active, #site-header a:visited {
-	color: #fff;
+	color: #94C73F;
 }
 
 #site-header a:hover {
+	color:#FFFFFF;
 }
 
 
@@ -73,12 +75,12 @@ a:hover {
 a#nav-bttn:link,
 a#nav-bttn:visited {
   color: #fff;
-  background: #9966CC;
+  background: #444;
   box-shadow: -2px 2px 0 rgba(0,0,0,0.1);
 }
 
 a#nav-bttn:hover {
-  background: #aa77dd;
+  background: #a4a4a4;
 }
 
 
@@ -89,6 +91,7 @@ a#nav-bttn:hover {
   border: 1em solid #666699;
   border-top: 0.5em solid #666699;
   background: #9966CC;
+  float: right;
 }
 
 .access li {
@@ -97,7 +100,7 @@ a#nav-bttn:hover {
 
 .access a:hover {
   color: #fff;
-  background: #354717;
+  background: #94C73F;
 }
 
 .access a:visited, .access a:active, .access a:link {
@@ -150,10 +153,10 @@ textarea {
 .fileinput-container {
     border-radius: 4px;
     padding-left: 3.25em;
-    color: #9966CC;
+    color: #444;
 }
 .fileinput-container:hover {
-    color: #663399;
+    color: #a4a4a4;
 }
 .fileinput-container span:before {
   content: "\0020";
@@ -224,7 +227,7 @@ a.reply-link:hover {
 -------------------------------------------------------------- */
 
 #ticker {
-  background-color: #354717;
+  background-color: #777777;
 }
 
 ul.recent-points {
@@ -232,11 +235,11 @@ ul.recent-points {
 }
 
 .recent-points li {
-  border-bottom: 3px solid #505070;
+  border-bottom: 3px solid #6E6E6E;
 }
 
 .recent-points li:hover {
-  background: #444455;
+  background: #a4a4a4;
 }
 
 .recent-points a {
