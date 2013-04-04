@@ -19,7 +19,10 @@ map:
     minZoom: 10
     maxZoom: 17
   base_layer:
-    url: http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{x}/{y}
+    #url: http://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/Basemaps/MassGISBasemapWithLabels2/MapServer/tile/{z}/{y}/{x}
+    url: http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}.png
+    url: http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png
+    #url: http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}
     #url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
     attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
   layers: []
