@@ -16,7 +16,7 @@ map:
       lat: 41.801447
       lng: -72.242585
     zoom: 14
-    minZoom: 10
+    minZoom: 1
     maxZoom: 17
   base_layer:
     #url: http://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/Basemaps/MassGISBasemapWithLabels2/MapServer/tile/{z}/{y}/{x}
@@ -25,7 +25,18 @@ map:
     #url: http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}
     #url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
     attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-  layers: []
+  layers:
+    - id: 'townboundary'
+      url: '/static/layers/mansfield.geojson'
+      type: 'json'
+      visible: true
+      rules:
+        - condition: 'true'
+          style:
+            color: '#444444'
+            opacity: 0.9
+            fillOpacity: 0.1
+            weight: 1.5
 
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
@@ -134,8 +145,8 @@ place:
       name: location_type
       type: select
       options:
-        - Place you want to change
         - Place you want to preserve
+        - Place you want to change
         - General comment
     - prompt: _(Description)
       type: textarea
@@ -202,3 +213,6 @@ pages:
     slug: about
     url: /static/pages/about.html
     start_page: true
+  - title: Home
+    url: http://www.mansfieldtomorrow.com/
+    external: true
