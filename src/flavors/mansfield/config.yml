@@ -20,23 +20,23 @@ map:
     maxZoom: 17
   base_layer:
     #url: http://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/Basemaps/MassGISBasemapWithLabels2/MapServer/tile/{z}/{y}/{x}
-    url: http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}.png
-    url: http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png
+    #url: http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}.png
+    #url: http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png
     #url: http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}
-    #url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
+    url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
     attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
   layers:
     - id: 'townboundary'
-      url: '/static/layers/mansfield.geojson'
+      url: '/static/layers/mansfield_ct.geojson'
       type: 'json'
       visible: true
       rules:
         - condition: 'true'
           style:
-            color: '#444444'
+            color: '#000'
             opacity: 0.9
-            fillOpacity: 0.1
-            weight: 1.5
+            fillOpacity: 0
+            weight: 2
 
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
@@ -214,6 +214,6 @@ pages:
     slug: about
     url: /static/pages/about.html
     start_page: true
-  - title: Home
+  - title: MansfieldTomorrow.com
     url: http://www.mansfieldtomorrow.com/
     external: true
