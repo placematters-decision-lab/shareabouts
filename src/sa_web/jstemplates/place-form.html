@@ -13,11 +13,19 @@
 
             {{# place_config.items }}
             <p>
+              {{^is_checkbox}}
               <label for="place-{{ name }}">{{ prompt }} {{# optional }}(optional){{/ optional }}</label>
+              {{/is_checkbox}}
 
               {{#is_input}}
               <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
               {{/is_input}}
+              
+              {{#is_checkbox}}
+              <label for"place-{{name}}" class="checkbox">
+              <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>{{ prompt }}
+              </label>
+              {{/is_checkbox}}
 
               {{#is_textarea}}
               <textarea id="place-{{ name }}" name="{{ name }}"{{#attrs}} {{ key }}="{{ value }}"{{/attrs}}></textarea>
