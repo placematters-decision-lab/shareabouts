@@ -10,7 +10,7 @@ TEMPLATE_DEBUG = DEBUG
 
 SHAREABOUTS = {
   'FLAVOR': 'default_config',
-  'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/demo-user/datasets/demo-data/',
+  'DATASET_ROOT': 'http://api.shareabouts.org',
   'DATASET_KEY': 'abc123',
 }
 
@@ -62,11 +62,11 @@ SHAREABOUTS = {
 #  'DATASET_KEY': 'abc123',
 #}
 
-SHAREABOUTS = {
-  'FLAVOR': 'ped_obstacles',
-  'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/openplans/datasets/ped_obstacles/',
-  'DATASET_KEY': 'abc123',
-}
+#SHAREABOUTS = {
+#  'FLAVOR': 'ped_obstacles',
+#  'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/openplans/datasets/ped_obstacles/',
+#  'DATASET_KEY': 'abc123',
+#}
 
 #SHAREABOUTS = {
 #  'FLAVOR': 'sistercities',

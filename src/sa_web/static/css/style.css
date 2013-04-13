@@ -183,9 +183,9 @@ body {
   font-weight: bold;
   text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.5);
   line-height: 1.325;
-  color: #eee;
+  color: #94C73F;
   float: left;
-  margin: 0 0.5em 0 0;
+  margin: 0 0.5em 0 1.3em;
 }
 #site-title a:link,
 #site-title a:visited {
@@ -1044,6 +1044,7 @@ ul.recent-points {
     left: 0;
     overflow: auto;
     padding: 1.5em 1em;
+    font-size: 105%;
 
     background:
       linear-gradient(white 30%, rgba(255,255,255,0)),
