@@ -116,6 +116,7 @@ place:
       type: checkbox
       optional: true
       name:  traffic_does_not_yield
+      legend: Checkbox Group
       attrs:
         - key: value
           value: Traffic Does Not Yield
@@ -165,6 +166,7 @@ place:
       type: checkbox
       optional: true
       name: crosswalk_blocked
+      legend: Another Group
       attrs:
         - key: value
           value: Crosswalk Blocked

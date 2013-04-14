@@ -21,7 +21,10 @@
               <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
               {{/is_input}}
               
+              
+              
               {{#is_checkbox}}
+              {{#legend}}<legend>{{ legend }}</legend> {{/legend}}
               <label for"place-{{name}}" class="checkbox">
               <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>{{ prompt }}
               </label>
