@@ -7,6 +7,21 @@
  * NOTE: "With great power comes great responsibility."
  */
 
+/*Legend Area
+ * 
+ */
+.legendITM {
+
+	color: #f2f2f2;
+	line-height: .2em;
+	bottom: 1em;
+}
+#legendarea {
+padding-left: .8em;
+border-bottom: 3px solid #6E6E6E;
+padding-bottom: 2em;
+}
+
 /* =Base Typography
 -------------------------------------------------------------- */
 
