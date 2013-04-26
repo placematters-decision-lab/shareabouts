@@ -145,7 +145,7 @@ place:
       name: location_type
       type: select
       options:
-        - Please select
+        - Please Select
         - Place you want to preserve
         - Place you want to change
         - General comment
