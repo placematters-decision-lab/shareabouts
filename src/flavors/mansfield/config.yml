@@ -36,7 +36,19 @@ map:
             color: '#000'
             opacity: 0.9
             fillOpacity: 0
-            weight: 2
+            weight: 5
+    - id: 'pdaboundary'
+      url: '/static/layers/PDA.geojson'
+      type: 'json'
+      visible: true
+      rules:
+        - condition: 'true'
+          style:
+            color: '#000'
+            opacity: 0.6
+            fillOpacity: 0
+            weight: 3
+
 
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
