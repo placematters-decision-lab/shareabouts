@@ -5,7 +5,7 @@ app:
   # Header name
   #name: Mansfield Tomorrow
   # Meta description that will show up in Google search results
-  meta_description: _(Mansfield Tomorrow is a process for planning the future of Mansfield. This map is a tool to add places you want to preserve and change. It is powered by Shareabouts, a mapping tool to gather public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  meta_description: This is a Walkshop map built by PlaceMatters. It is powered by Shareabouts, a mapping tool to gather public input. Use it to collect suggested locations and comments in a social, engaging process.)
 
 # Settings for map and layer configs
 map:
@@ -13,8 +13,8 @@ map:
   geolocation_onload: false
   options:
     center:
-      lat: 41.801447
-      lng: -72.242585
+      lat: 38.899583
+      lng: -77.047119
     zoom: 14
     minZoom: 1
     maxZoom: 17
@@ -26,31 +26,31 @@ map:
     url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
     attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
   layers:
-    - id: 'townboundary'
-      url: '/static/layers/mansfield_ct.geojson'
-      type: 'json'
-      visible: true
-      rules:
-        - condition: 'true'
-          style:
-            color: '#000'
-            opacity: 0.4
-            fillOpacity: 0
-            weight: 2
-    - id: 'pdaboundary'
-      url: '/static/layers/PDA.geojson'
-      type: 'json'
-      visible: true
-      legend: true,
-      rules:
-        - condition: 'true'
-          style:
-            fillColor: '#996600'
-            color: '#000'
-            opacity: .2
-            dashArray: 5
-            fillOpacity: .3
-            weight: 1
+#    - id: 'townboundary'
+#      url: '/static/layers/mansfield_ct.geojson'
+#      type: 'json'
+#      visible: true
+#      rules:
+#        - condition: 'true'
+#          style:
+#            color: '#000'
+#            opacity: 0.4
+#            fillOpacity: 0
+#            weight: 2
+#    - id: 'pdaboundary'
+#      url: '/static/layers/PDA.geojson'
+#      type: 'json'
+#      visible: true
+#      legend: true,
+#      rules:
+#        - condition: 'true'
+#          style:
+#            fillColor: '#996600'
+#            color: '#000'
+#            opacity: .2
+#            dashArray: 5
+#            fillOpacity: .3
+#            weight: 1
 
 
 # The keys show up in the dropdown list when you are adding a new place
@@ -224,11 +224,11 @@ support:
   action_text: supported
   anonymous_name: _(Someone)
 
-pages:
-  - title: _(About)
-    slug: about
-    url: /static/pages/about.html
-    start_page: true
-  - title: MansfieldTomorrow.com
-    url: http://www.mansfieldtomorrow.com/
-    external: true
+#pages:
+#  - title: _(About)
+#    slug: about
+#    url: /static/pages/about.html
+#    start_page: false
+#  - title: MansfieldTomorrow.com
+#    url: http://www.mansfieldtomorrow.com/
+#    external: true
