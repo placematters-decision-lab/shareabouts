@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Mansfield Tomorrow | Mapping Places to Preserve and Change
+  title: Walkshops | Mapping Places to Preserve and Change
   # Header name
   #name: Mansfield Tomorrow
   # Meta description that will show up in Google search results
-  meta_description: _(Mansfield Tomorrow is a process for planning the future of Mansfield. This map is a tool to add places you want to preserve and change. It is powered by Shareabouts, a mapping tool to gather public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  meta_description: _( This map is a tool to add places you want to preserve and change. It is powered by Shareabouts, a mapping tool to gather public input. Use it to collect suggested locations and comments in a social, engaging process.)
 
 # Settings for map and layer configs
 map:
@@ -13,9 +13,9 @@ map:
   geolocation_onload: false
   options:
     center:
-      lat: 41.801447
-      lng: -72.242585
-    zoom: 14
+      lat: 28.423837
+      lng: -81.467056
+    zoom: 13
     minZoom: 1
     maxZoom: 17
   base_layer:
