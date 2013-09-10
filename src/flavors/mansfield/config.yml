@@ -214,6 +214,6 @@ pages:
     slug: about
     url: /static/pages/about.html
     start_page: true
-  - title: MansfieldTomorrow.com
-    url: http://www.mansfieldtomorrow.com/
+  - title: PlaceMatters.org
+    url: http://www.placematters.org/
     external: true
