@@ -9,9 +9,9 @@ TEMPLATE_DEBUG = DEBUG
 # information for the flavor.
 
 SHAREABOUTS = {
-  'FLAVOR': 'default_config',
-  'DATASET_ROOT': 'http://api.shareabouts.org',
-  'DATASET_KEY': 'abc123',
+  'FLAVOR': 'eastcorridor',
+  'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/jlally/datasets/eastcorridor/',
+  'DATASET_KEY': 'OTcyMDEzYjAxZTUwNzRhZTZkN2RlNDNk',
 }
 
 #SHAREABOUTS = {

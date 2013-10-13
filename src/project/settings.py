@@ -141,13 +141,13 @@ TEST_RUNNER = 'sa_web.test_runner.DatabaselessTestSuiteRunner'
 
 # Shareabouts flavor config
 SHAREABOUTS = {
-    'FLAVOR': 'default_config',
+    'FLAVOR': 'eastcorridor',
     # The name of the flavor. Optional, but useful for using the default settings.
 
-    'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/datasets/demo-user/demo-data/',
+    'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/jlally/datasets/eastcorridor/',
     # The root URL of the dataset API
 
-    'DATASET_KEY': 'abc123',
+    'DATASET_KEY': 'OTcyMDEzYjAxZTUwNzRhZTZkN2RlNDNk',
     # The API key for writing to the dataset.  You must set this in order to be
     # able to write to the dataset
 
