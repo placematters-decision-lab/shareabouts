@@ -1,6 +1,6 @@
 {
     "push_branch": null, 
-    "application": "specialops", 
+    "application": "drcog", 
     "version": "0.9.7", 
     "push_protocol": "rsync"
 }

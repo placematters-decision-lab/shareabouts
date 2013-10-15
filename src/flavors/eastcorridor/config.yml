@@ -1,7 +1,7 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Walkshops | Mapping Places to Preserve and Change
+  title: Shareabouts | Mapping Places to Preserve and Change
   # Header name
   #name: Mansfield Tomorrow
   # Meta description that will show up in Google search results
@@ -13,9 +13,9 @@ map:
   geolocation_onload: false
   options:
     center:
-      lat: 39.752651
-      lng: -105.001685
-    zoom: 14
+      lat: 39.796749
+      lng: -104.848516
+    zoom: 12
     minZoom: 1
     maxZoom: 17
   base_layer:
@@ -26,17 +26,40 @@ map:
     url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
     attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
   layers:
-    - id: 'townboundary'
-      url: '/static/layers/mansfield_ct.geojson'
+    - id: 'eastline'
+      url: '/static/layers/eastline1.geojson'
       type: 'json'
       visible: true
       rules:
         - condition: 'true'
           style:
-            color: '#000'
-            opacity: 0.9
+            color: '#e74c3c'
+            opacity: 0.8
             fillOpacity: 0
             weight: 2
+    - id: 'stationbuffers'
+      url: '/static/layers/eastline_stationhalfmilebuffer.geojson'
+      type: 'json'
+      visible: true
+      rules:
+        - condition: 'true'
+          style:
+            color: '#e74c3c'
+            opacity: 0.2
+            fillOpacity: 0.1
+            weight: 2
+    - id: 'stations'
+      url: '/static/layers/eaststations.geojson'
+      type: 'json'
+      visible: true
+      rules:
+        - condition: 'true'
+          style:
+            color: '#e74c3c'
+            opacity: 0.9
+            fillOpacity: 0.8
+            weight: 0.2
+            radius: 3.5
 
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
@@ -44,7 +67,7 @@ place_types:
   Place you want to preserve:
     default: green_feature
     focused: green_focused
-    label: _(place to preserve)
+    label: _(Treasured Places)
   General comment:
     default: yellow_feature
     focused: yellow_focused
@@ -52,7 +75,7 @@ place_types:
   Place you want to change:
     default: red_feature
     focused: red_focused
-    label: _(place to change)
+    label: _(Concern)
 
 # Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
 # for documention of each property. Any omitted property will be undefined.
@@ -146,8 +169,8 @@ place:
       type: select
       options:
         - Please select
-        - Place you want to preserve
-        - Place you want to change
+        - Treasured Place
+        - Concern
         - General comment
     - prompt: _(Description)
       type: textarea
@@ -210,10 +233,10 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-  - title: _(About)
+  - title: _(Instructions)
     slug: about
     url: /static/pages/about.html
     start_page: true
-  - title: PlaceMatters.org
-    url: http://www.placematters.org/
-    external: true
+  # - title: PlaceMatters.org
+    # url: http://www.placematters.org/
+    # external: true

@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "OBJECTID": 21, "NAME": "40th and Airport Station", "PROJCORR": 110.0, "PKNGSP2015": 1079.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 1079.0, "geom_STAre": 21892042.6801, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -104.787211433447155, 39.769669969608657 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "OBJECTID": 32, "NAME": "Peoria Station", "PROJCORR": 110.0, "PKNGSP2015": 0.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.5555, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -104.847347037698526, 39.76676467862071 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "OBJECTID": 34, "NAME": "DIA Station", "PROJCORR": 110.0, "PKNGSP2015": 0.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.6977, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -104.673875808187447, 39.844407168111559 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "OBJECTID": 86, "NAME": "Central Park Blvd Station", "PROJCORR": 110.0, "PKNGSP2015": 0.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.6713, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -104.892431930155752, 39.770328515152706 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "OBJECTID": 87, "NAME": "Colorado Boulevard Station", "PROJCORR": 110.0, "PKNGSP2015": 0.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.6141, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -104.943755629793145, 39.77568803446708 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "OBJECTID": 88, "NAME": "38th and Blake Station", "PROJCORR": 110.0, "PKNGSP2015": 200.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.6041, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -104.973066832789058, 39.771100257736954 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "OBJECTID": 45, "NAME": "Denver Union Station", "PROJCORR": 111.0, "PKNGSP2015": 0.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.7322, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.001319001611989, 39.753103999169937 ] } }
+
+]
+}
