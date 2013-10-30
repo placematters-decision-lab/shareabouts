@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "OBJECTID": 19, "NAME": "41st Avenue Station", "PROJCORR": 102.0, "PKNGSP2015": 500.0, "PKNGSP2030": 1000.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.4916, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -104.996399687750994, 39.773228617272494 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "OBJECTID": 20, "NAME": "Pecos Station", "PROJCORR": 102.0, "PKNGSP2015": 500.0, "PKNGSP2030": 600.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.672, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.004389409965015, 39.805614655756663 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "OBJECTID": 33, "NAME": "Olde Town Station", "PROJCORR": 102.0, "PKNGSP2015": 300.0, "PKNGSP2030": 400.0, "CURRPKNGSP": 200.0, "geom_STAre": 21892042.6205, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.078407727108001, 39.798953252176638 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "OBJECTID": 82, "NAME": "Ward Road Station", "PROJCORR": 102.0, "PKNGSP2015": 200.0, "PKNGSP2030": 700.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.5867, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.133130492498694, 39.788189370851029 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "OBJECTID": 83, "NAME": "Arvada Ridge Station", "PROJCORR": 102.0, "PKNGSP2015": 300.0, "PKNGSP2030": 525.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.7141, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.110681991855444, 39.792456833260253 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "OBJECTID": 84, "NAME": "Sheridan Station", "PROJCORR": 102.0, "PKNGSP2015": 150.0, "PKNGSP2030": 330.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.5939, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.050135266951713, 39.803646192528483 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "OBJECTID": 85, "NAME": "Federal Station", "PROJCORR": 102.0, "PKNGSP2015": 300.0, "PKNGSP2030": 575.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.6714, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.02192479280437, 39.803959474908972 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "OBJECTID": 45, "NAME": "Denver Union Station", "PROJCORR": 111.0, "PKNGSP2015": 0.0, "PKNGSP2030": 0.0, "CURRPKNGSP": 0.0, "geom_STAre": 21892042.7322, "geom_STLen": 16586.927081300000282 }, "geometry": { "type": "Point", "coordinates": [ -105.001319001611989, 39.753103999169937 ] } }
+
+]
+}

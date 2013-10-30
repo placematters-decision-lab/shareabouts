@@ -46,6 +46,7 @@ a:hover {
 
 #site-header {
   background:url('PMHeader.png') no-repeat;
+  background-size: 300px;
   background-color: #FFF;
 }
 

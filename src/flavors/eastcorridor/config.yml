@@ -13,11 +13,12 @@ map:
   geolocation_onload: false
   options:
     center:
-      lat: 39.796749
-      lng: -104.848516
+      lat: 39.783213
+      lng: -105.067492
     zoom: 12
-    minZoom: 1
+    minZoom: 9
     maxZoom: 17
+    maxBounds: [ [39.697149 , -105.269966], [39.873780 , -104.878535] ]
   base_layer:
     #url: http://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/Basemaps/MassGISBasemapWithLabels2/MapServer/tile/{z}/{y}/{x}
     #url: http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}.png
@@ -26,6 +27,42 @@ map:
     url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
     attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
   layers:
+   #Gold Corridor          
+    - id: 'goldline'
+      url: '/static/layers/goldline.geojson'
+      type: 'json'
+      visible: true
+      rules:
+        - condition: 'true'
+          style:
+            color: '#f1c40f'
+            opacity: 0.8
+            fillOpacity: 0
+            weight: 2
+    - id: 'stationbuffers'
+      url: '/static/layers/goldstationsbuffer.geojson'
+      type: 'json'
+      visible: true
+      rules:
+        - condition: 'true'
+          style:
+            color: '#f1c40f'
+            opacity: 0.4
+            fillOpacity: 0.25
+            weight: 2
+    - id: 'stations'
+      url: '/static/layers/goldstations.geojson'
+      type: 'json'
+      visible: true
+      rules:
+        - condition: 'true'
+          style:
+            color: '#f1c40f'
+            opacity: 0.9
+            fillOpacity: 0.8
+            weight: 0.2
+            radius: 3.5
+ #East Corridor
     - id: 'eastline'
       url: '/static/layers/eastline1.geojson'
       type: 'json'
@@ -61,6 +98,7 @@ map:
             weight: 0.2
             radius: 3.5
 
+
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
@@ -69,8 +107,8 @@ place_types:
     focused: green_focused
     label: _(Treasured)
   Comment:
-    default: yellow_feature
-    focused: yellow_focused
+    default: grey_feature
+    focused: grey_focused
     label: _(Comment)
   Concern:
     default: red_feature
@@ -80,8 +118,8 @@ place_types:
 # Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
 # for documention of each property. Any omitted property will be undefined.
 place_type_icons:
-  yellow_feature:
-    iconUrl: /static/css/images/feature-point-yellow.png
+  grey_feature:
+    iconUrl: /static/css/images/feature-point-grey.png
     iconSize:
       width: 17
       height: 18
@@ -104,6 +142,18 @@ place_type_icons:
     iconAnchor:
       x: 9
       y: 9
+  grey_focused:
+    iconUrl: /static/css/images/marker-focused-grey.png
+    shadowUrl: /static/css/images/marker-shadow.png
+    iconSize:
+      width: 25
+      height: 41
+    shadowSize:
+      width: 41
+      height: 41
+    iconAnchor:
+      x: 12
+      y: 41
   yellow_focused:
     iconUrl: /static/css/images/marker-focused-yellow.png
     shadowUrl: /static/css/images/marker-shadow.png
