@@ -38,7 +38,7 @@ map:
             # color: '#f1c40f'
             # opacity: 0.8
             # fillOpacity: 0
-            weight: 2
+            #weight: 2
     - id: 'stationbuffers'
       url: '/static/layers/goldstationsbuffer.geojson'
       type: 'json'
