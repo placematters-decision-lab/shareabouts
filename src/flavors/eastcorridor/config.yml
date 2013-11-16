@@ -18,7 +18,7 @@ map:
     zoom: 12
     minZoom: 9
     maxZoom: 17
-    maxBounds: [ [39.697149 , -105.269966], [39.873780 , -104.878535] ]
+    #maxBounds: [ [39.697149 , -105.269966], [39.873780 , -104.878535] ]
   base_layer:
     #url: http://gisprpxy.itd.state.ma.us/arcgisserver/rest/services/Basemaps/MassGISBasemapWithLabels2/MapServer/tile/{z}/{y}/{x}
     #url: http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}.png
@@ -28,16 +28,16 @@ map:
     attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
   layers:
    #Gold Corridor          
-    - id: 'goldline'
-      url: '/static/layers/goldline.geojson'
-      type: 'json'
-      visible: true
-      rules:
-        - condition: 'true'
-          style:
-            color: '#f1c40f'
-            opacity: 0.8
-            fillOpacity: 0
+    # - id: 'goldline'
+      # url: '/static/layers/goldline.geojson'
+      # type: 'json'
+      # visible: true
+      # rules:
+        # - condition: 'true'
+          # style:
+            # color: '#f1c40f'
+            # opacity: 0.8
+            # fillOpacity: 0
             weight: 2
     - id: 'stationbuffers'
       url: '/static/layers/goldstationsbuffer.geojson'
