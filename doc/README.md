@@ -1,12 +1,9 @@
 From 0 to Shareabouts in about an hour
 ======================================
 
-Shareabouts requires python2.6 or greater.
-
 If you are converting from Shareabouts 1.0, note that
-we have switched platforms. See [the upgrade docs](UPGRADE.md).
-
-If you are looking for documentation for Shareabouts v1, see [the original docs](https://github.com/openplans/shareabouts/blob/v1/doc/README_FOR_APP).
+we have switched platforms. See [the upgrade docs](UPGRADE.md). If you are looking for documentation 
+for Shareabouts v1, see [the original docs](https://github.com/openplans/shareabouts/blob/v1/doc/README_FOR_APP).
 
 What's here
 ------------
@@ -16,15 +13,17 @@ which consists of JavaScript, some configuration files that you use to
 tailor the app to your needs, and a small glue layer that talks to the
 underlying Shareabouts API server.
 
-The Shareabouts API is *not* part of this package. You'll need to
-install that separately, or its authors (OpenPlans) would be happy to
-host your API for you. Go to [api.shareabouts.org](http://api.shareabouts.org) and request access.
+The Shareabouts API is *not* part of this package. The easiesy way to get up and running is 
+to use the beta hosted API, managed by OpenPlans. 
+Go to [api.shareabouts.org](http://api.shareabouts.org) and request access.
 
 For more about the parts of Shareabouts,
 see [the architecture documentation](ARCHITECTURE.md).
 
 Local Setup
 ------------
+
+Shareabouts requires python2.6 or greater.
 
 Install `pip` and `virtualenv`, if not already installed.  These will keep your
 python code isolated from the rest of your machine and ensure you have
@@ -75,16 +74,13 @@ to activate your virtual environment every time you start a new terminal session
 Running the Shareabouts API Service
 ------------------------------------
 
-For local development, you will also want to install and run the
-back-end API service.  To do so, you will want clone the
+For local development, your best bet is to use OpenPlans' hosted API. 
+Go to [api.shareabouts.org](http://api.shareabouts.org) and request access.
+
+Alternatively, install and run the
+back-end API service yourself.  To do so, you will want clone the
 [Shareabouts API](https://github.com/openplans/shareabouts-api).
 
-For example, in another terminal session, do this:
-
-    git clone https://github.com/openplans/shareabouts-api
-    cd shareabouts-api
-
-Then read its own install documentation, in `doc/README.md`.
 You'll want to run it on a separate port; we usually use 8001.
 
 Configuration
