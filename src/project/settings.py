@@ -154,17 +154,14 @@ TEST_RUNNER = 'sa_web.test_runner.DatabaselessTestSuiteRunner'
 
 # Shareabouts flavor config
 SHAREABOUTS = {
-<<<<<<< HEAD
-    'FLAVOR': 'eastcorridor',
-=======
-    'FLAVOR': 'default',
->>>>>>> upstream/master
+
+    'FLAVOR': 'walkdenver',
     # The name of the flavor. Optional, but useful for using the default settings.
 
-    'DATASET_ROOT': 'http://api.shareabouts.org/api/v1/jlally/datasets/eastcorridor/',
+    'DATASET_ROOT': 'http://api.shareabouts.org/api/v2/jlally/datasets/walkdenver/',
     # The root URL of the dataset API
 
-    'DATASET_KEY': 'OTcyMDEzYjAxZTUwNzRhZTZkN2RlNDNk',
+    'DATASET_KEY': 'Njk0YzQzZmZlYzNmOWFiYTJiYTA5ZTA2',
     # The API key for writing to the dataset.  You must set this in order to be
     # able to write to the dataset
 

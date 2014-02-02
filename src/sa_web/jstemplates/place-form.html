@@ -12,9 +12,9 @@
             <!-- TODO We need user data in the template to know whether a user
                       is already logged in.
               -->
-
+<table cellpadding ="1" cellspacing = "0" width="100%">
             {{# place_config.items }}
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD
             <p>
               {{^is_checkbox}}
               <label for="place-{{ name }}">{{ prompt }} {{# optional }}(optional){{/ optional }}</label>
@@ -32,34 +32,36 @@
               <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>{{ prompt }}
               </label>
               {{/is_checkbox}}
-=======
+======= -->
+ <tr><td class="QUESTION" width="70%">
             <p class="{{ type }}">
               {{#is_authenticated}}
                 {{^is_submitter_name}}
                 <label for="place-{{ name }}">{{ prompt }} {{# optional }}<small>(optional)</small>{{/ optional }}</label>
                 {{/is_submitter_name}}
               {{^}}
-              <label for="place-{{ name }}">{{ prompt }} {{# optional }}<small>(optional)</small>{{/ optional }}</label>
+              <label for="place-{{ name }}">{{ prompt }} {{# optional }}<small>(optional)</small>{{/ optional }}</label></td>
               {{/is_authenticated}}
 
               {{#if is_input}}
+              <td>
                 {{#is_submitter_name}}
                   {{#is_authenticated}}
                   {{^}}
+                    <span class="or-sign-in">or sign in with <!-- <a class="#" --><a href="/users/login/twitter/">Twitter</a> or <!-- <a class="auth-inline facebook-btn" --><a href="/users/login/facebook/">Facebook</a></span>
                     <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
-                    <span class="or-sign-in">Or sign in with <a class="auth-inline twitter-btn" href="/users/login/twitter/">Twitter</a> <a class="auth-inline facebook-btn" href="/users/login/facebook/">Facebook</a></span>
                   {{/is_authenticated}}
                 {{^}}
                   <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
                 {{/is_submitter_name}}
+              </td></tr>
               {{/if}}
->>>>>>> upstream/master
+<!-- >>>>>>> upstream/master -->
 
-              {{#is_textarea}}
-              <textarea id="place-{{ name }}" name="{{ name }}"{{#attrs}} {{ key }}="{{ value }}"{{/attrs}}></textarea>
-              {{/is_textarea}}
+
 
               {{#is_select}}
+               <td>
               <select id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
                 {{# options }}
                   {{#if label}}
@@ -69,8 +71,9 @@
                   {{/if}}
                 {{/ options }}
               </select>
+              </td></tr>
               {{/is_select}}
-
+			  <td>
               {{#is_file}}
               <!--[if lt IE 10 ]><br>Sorry, your browser isn't compatible with our file upload method.<![endif]-->
               <!--[if (gt IE 9)|!(IE)]><!-->
@@ -83,10 +86,21 @@
               <span class="fileinput-name">
                 {{^is_fileinput_supported}}Sorry, your browser doesn't support file uploads.{{/is_fileinput_supported}}
               </span>
+              </td>
               <!--<![endif]-->
               {{/is_file}}
+            
+              {{#is_textarea}}
+             <!-- <td></td>
+              </tr><tr> -->
+              <textarea id="place-{{ name }}" name="{{ name }}"{{#attrs}} {{ key }}="{{ value }}"{{/attrs}}></textarea>
+             <!-- </td>
+			  </tr> -->
+              {{/is_textarea}}
             </p>
             {{/ place_config.items }}
+             </table>
+                       
           </fieldset>
 
           <input name="save-place-btn" id="save-place-btn" type="submit" value="{{ place_config.submit_button_label }}" class="btn btn-primary submit-btn">

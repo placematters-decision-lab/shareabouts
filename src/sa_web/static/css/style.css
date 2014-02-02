@@ -178,9 +178,8 @@ body {
 
 /* Logo */
 #site-title {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Pathway Gothic One', sans-serif;
   font-size: 3em;
-  font-weight: bold;
   text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.5);
   line-height: 1.325;
   color: #94C73F;
@@ -920,7 +919,7 @@ ul.recent-points {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
 }
 #powered-by a.shareabouts-logo {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Pathway Gothic One', sans-serif;
   font-weight: bold;
   font-size: 1.4em;
   color: #a3c7d9;

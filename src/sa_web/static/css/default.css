@@ -274,8 +274,8 @@ img {
 #site-title {
   color: #eee;
   font-size: 1em;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 700;
+  font-family: 'Monda', sans-serif;
+  font-weight: 500;
   text-shadow: 1px -1px 1px rgba(0,0,0,0.5);
   float: left;
   margin: 0 0.5em 0 0;
@@ -859,8 +859,12 @@ form .signed-in-as a {
   text-transform: uppercase;
 }
 .or-sign-in {
-  display: block;
-  margin-top: 0.5em;
+  display:inline;
+  margin-bottom: 0.5em;
+  font-size: .75em;
+  font-style: italic;
+  font-color: #999;
+
 }
 a.auth-inline {
   display: inline;
@@ -942,7 +946,7 @@ ul.recent-points {
   text-align: center;
 }
 a.shareabouts-logo {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'dancing script', cursive;
   font-weight: bold;
   font-size: 1.325em;
   color: #a3c7d9;
