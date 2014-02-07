@@ -20,3 +20,22 @@
 
 @media only screen and (min-width: 1300px) {
 }
+
+input[type="text"].peds-input,label.peds-input, select.peds-input, 
+tr.peds-input {
+	display: none;
+}
+	
+input[type="text"].intersection-input,label.intersection-input, select.intersection-input, 
+tr.intersection-input {
+	display: none;
+}
+	
+input[type="text"].opt-input,label.opt-input, select.opt-input,tr.opt-input {
+	display: none;
+}
+	
+input[type="text"].street-input,label.street-input, select.street-input,tr.street-input {
+	display: none;
+}
+		

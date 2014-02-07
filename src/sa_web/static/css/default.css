@@ -52,7 +52,7 @@ h6 {
   text-transform: uppercase;
 }
 p {
-  margin: 0 0 1.5em;
+  margin: 0 0 .7em;
 }
 ul,
 ol,
@@ -165,10 +165,11 @@ fieldset {
   padding: 0 0 1.2em;
 }
 label {
-  font-size: 0.75em;
-  text-transform: uppercase;
-  color: #999;
-  margin-right: 0.5em;
+  font-size: 0.8em;
+  text-transform: none;
+  color: #a2a2a2;
+  font-weight: bold;
+  margin-right: .5em;
 }
 label small {
   text-transform: none;
@@ -176,9 +177,9 @@ label small {
 input[type=text],
 textarea {
   outline: 0;
-  border: 0.25em solid #a3c7d9;
+  border: 0.15em solid #a3c7d9;
   border-radius: 0;
-  padding: 0.5em;
+  padding: 0.25em;
   display: block;
   width: 100%;
   -webkit-box-sizing: border-box;

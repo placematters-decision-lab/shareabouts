@@ -1,0 +1,24 @@
+<script type="text/javascript">
+	$(function() {
+		$("#place-location_type").on('change', function() {
+			$('.peds-input,.street-input,.intersection-input,.opt-input').hide();
+			
+			if ( $(this).val() == "peds" ) {
+				$(".peds-input").show()
+				$(".opt-input").show();
+			} 
+			else if ( $(this).val() == "intersection" ) {
+				$(".intersection-input").show()
+				$(".opt-input").show();
+			} 
+			else if ( $(this).val() == "street" ) {
+				$(".street-input").show()
+				$(".opt-input").show();
+			} 
+			else {
+				
+			}
+		});
+	});
+	
+</script>

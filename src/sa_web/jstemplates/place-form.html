@@ -1,4 +1,4 @@
-        <p class="drag-marker-instructions">Drag the map to your location.</p>
+        <p class="drag-marker-instructions"> Check out <a href="/page/tips">our tips</a>, then drag the map to your location.</p> 
 
         <h4 class="">{{ place_config.title }}</h4>
 
@@ -12,35 +12,19 @@
             <!-- TODO We need user data in the template to know whether a user
                       is already logged in.
               -->
-<table cellpadding ="1" cellspacing = "0" width="100%">
+<table cellpadding ="1" cellspacing="0" width="100%">
             {{# place_config.items }}
-<!-- <<<<<<< HEAD
-            <p>
-              {{^is_checkbox}}
-              <label for="place-{{ name }}">{{ prompt }} {{# optional }}(optional){{/ optional }}</label>
-              {{/is_checkbox}}
 
-              {{#is_input}}
-              <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
-              {{/is_input}}
-              
-              
-              
-              {{#is_checkbox}}
-              {{#legend}}<legend>{{ legend }}</legend> {{/legend}}
-              <label for"place-{{name}}" class="checkbox">
-              <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>{{ prompt }}
-              </label>
-              {{/is_checkbox}}
-======= -->
- <tr><td class="QUESTION" width="70%">
+
+
+ <tr {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}><td class="QUESTION" width="60%">
             <p class="{{ type }}">
               {{#is_authenticated}}
                 {{^is_submitter_name}}
-                <label for="place-{{ name }}">{{ prompt }} {{# optional }}<small>(optional)</small>{{/ optional }}</label>
+                <label for="place-{{ name }}"  {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>{{ prompt }} {{# optional }}<small>(optional)</small>{{/ optional }}</label>
                 {{/is_submitter_name}}
               {{^}}
-              <label for="place-{{ name }}">{{ prompt }} {{# optional }}<small>(optional)</small>{{/ optional }}</label></td>
+              <label for="place-{{ name }}"  {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>{{ prompt }} {{# optional }}<small>(optional)</small>{{/ optional }}</label></td>
               {{/is_authenticated}}
 
               {{#if is_input}}
@@ -49,20 +33,27 @@
                   {{#is_authenticated}}
                   {{^}}
                     <span class="or-sign-in">or sign in with <!-- <a class="#" --><a href="/users/login/twitter/">Twitter</a> or <!-- <a class="auth-inline facebook-btn" --><a href="/users/login/facebook/">Facebook</a></span>
-                    <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
+                    <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}} style="width:140px;">
                   {{/is_authenticated}}
                 {{^}}
                   <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
                 {{/is_submitter_name}}
               </td></tr>
               {{/if}}
-<!-- >>>>>>> upstream/master -->
 
-
+              {{#is_checkbox}}
+              <td>
+              {{#legend}}<legend>{{ legend }}</legend> {{/legend}}
+              <label for"place-{{name}}" class="checkbox">
+              <input style="width:140px;" id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}> {{ label }}<!-- {{ prompt }} -->
+              </label>
+              </td></tr>
+              {{/is_checkbox}}
+              
 
               {{#is_select}}
-               <td>
-              <select id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
+               <td class="dropdown" width="40%" valign="top" align="right">
+              <select style="width:140px;" id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
                 {{# options }}
                   {{#if label}}
                   <option value="{{value}}">{{label}}</option>
@@ -97,7 +88,7 @@
              <!-- </td>
 			  </tr> -->
               {{/is_textarea}}
-            </p>
+            
             {{/ place_config.items }}
              </table>
                        
@@ -105,7 +96,7 @@
 
           <input name="save-place-btn" id="save-place-btn" type="submit" value="{{ place_config.submit_button_label }}" class="btn btn-primary submit-btn">
 
-          {{#is_authenticated}}
+          {{#is_authenticated}}	
             <p class="signed-in-as"><img src="{{ current_user "avatar_url" }}" class="avatar" /> {{ current_user "name" }}. <a class="" href="/users/logout/">Log Out</a></p>
           {{^}}
           {{/is_authenticated}}

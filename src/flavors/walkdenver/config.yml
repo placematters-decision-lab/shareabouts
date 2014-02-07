@@ -3,7 +3,7 @@ app:
   # HTML Title
   title: WALKscope Denver
   # Header name
-  name: WALKscope Denver
+  name: WALKscope
   # Meta description that will show up in Google search results
   meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
 
@@ -39,18 +39,18 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  landmark:
-    label: _(Landmark)
+  peds:
+    label: _(Pedestrian Counts)
     rules:
-      - condition: '"{{location_type}}" === "landmark"'
+      - condition: '"{{location_type}}" === "peds"'
         # Display landmarks as icons
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/feature-point-brick.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/marker-focused-brick.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -69,22 +69,22 @@ place_types:
         #   opacity: 0.9
         #   fillOpacity: 0.4
 
-  park:
-    label: _(Park)
+  intersection:
+    label: _(Intersection Quality)
     rules:
-      - condition: '"{{location_type}}" === "park"'
+      - condition: '"{{location_type}}" === "intersection"'
         # Show parks that are points as icons...
 
         icon:
-          iconUrl: /static/css/images/markers/dot-4bbd45.png
+          iconUrl: /static/css/images/feature-point-pumpkin.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/images/markers/marker-4bbd45.png
+          iconUrl: /static/css/marker-focused-pumpkin.png
           shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          # iconSize: [25, 41]
+          #shadowSize: [41, 41]
+          # iconAnchor: [12, 41]
 
         # ...and parks that are polygons as shapes.
 
@@ -101,22 +101,22 @@ place_types:
           opacity: 0.9
           fillOpacity: 0.4
 
-  school:
-    label: _(School)
+  street:
+    label: _(Street Quality)
     rules:
-      - condition: '"{{location_type}}" === "school" && {{submission_sets.comments.length}} > 0'
-        # Display schools as circles
+      - condition: '"{{location_type}}" === "street"'
+ 
+        icon:
+          iconUrl: /static/css/images/feature-point-navy.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+        focus_icon:
+          iconUrl: /static/css/marker-focused-navy.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
 
-        # icon:
-        #   iconUrl: /static/css/images/markers/dot-f95016.png
-        #   iconSize: [17, 18]
-        #   iconAnchor: [9, 9]
-        # focus_icon:
-        #   iconUrl: /static/css/images/markers/marker-f95016.png
-        #   shadowUrl: /static/css/images/marker-shadow.png
-        #   iconSize: [25, 41]
-        #   shadowSize: [41, 41]
-        #   iconAnchor: [12, 41]
 
         style:
           color: '#f95016'
@@ -155,7 +155,7 @@ place:
   adding_supported: true
   add_button_label: _(Add a Place)
   action_text: _(added)
-  title: _(Tell us more...)
+  # title: _(Add a place...)
   action_text: _(created)
   anonymous_name: _(Someone)
   submit_button_label: _(Submit)
@@ -163,7 +163,7 @@ place:
     - prompt: _(What would you like to record?)
       type: select
       options:
-        - label: _(Choose One)
+        - label: _(...)
           value: ''
         - label: _(Number of Pedestrians)
           value: peds
@@ -175,23 +175,21 @@ place:
       attrs:
         - key: required
 # Ped Count
-    - prompt: _(How many people (excluding you) are currently on this street segment?)
+    - prompt: _(How many people excluding you are currently on this street segment)
       type: text
       name: num_peds
       optional: false
       attrs:
         - key: placeholder
-          value: _(Email)
+          value: _(Number of Peds)
         - key: size
-          value: 30  
-      attrs:
-        - key: required
-        - key: size
-          value: 4
+          value: 15
+        - key: class
+          value: peds-input
     - prompt: _(What's the temperature like?)
       type: select
       options:
-        - label: _(Choose One)
+        - label: _(...)
           value: ''
         - label: _(Warm (80° or more))
           value: warm
@@ -202,10 +200,12 @@ place:
       name: temp
       attrs:
         - key:  required
+        - key: class
+          value: peds-input
     - prompt: _(Is it raining or snowing?)
       type: select
       options:
-        - label: _(Choose One)
+        - label: _(...)
           value: ''
         - label: _(Raining)
           value: raining
@@ -215,11 +215,13 @@ place:
           value: neither
       name: precip
       attrs:
-        - key:  required
+        - key: required
+        - key: class
+          value: peds-input
     - prompt: _(How long did you observe this street segment?)
       type: select
       options:
-        - label: _(Choose One)
+        - label: _(...)
           value: ''
         - label: _(Less than 15 minutes)
           value: 0-15
@@ -234,7 +236,308 @@ place:
       name: duration
       attrs:
         - key: required
-   
+        - key: class
+          value: peds-input
+# Intersection Quality 
+    - prompt: _(How many lanes are there to cross (see tips)?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(1)
+          value: 1
+        - label: _(2)
+          value: 2
+        - label: _(3)
+          value: 3
+        - label: _(4)
+          value: 4
+        - label: _(5)
+          value: 5 
+        - label: _(6)
+          value: 6
+        - label: _(7)
+          value: 7
+        - label: _(8)
+          value: 8
+        - label: _(9)
+          value: 9
+        - label: _(10)
+          value: 10  
+        - label: _(11)
+          value: 11
+        - label: _(12)
+          value: 12
+        - label: _(13)
+          value: 13                     
+        - label: _(14)
+          value: 14  
+      name: num_lanes
+      attrs:
+        - key: required
+        - key: class
+          value: intersection-input
+    - prompt: _(Are there painted crosswalks?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no     
+      attrs:
+        - key: required
+        - key: class
+          value: intersection-input                 
+    - prompt: _(Are there median islands or bulb-outs?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes, median islands)
+          value: medianislands
+        - label: _(Yes, bulb-outs)
+          value: bulbouts                      
+        - label: _(Yes, Both)
+          value: both 
+        - label: _(No)
+          value: no   
+      name: intersection_islands
+      attrs:
+        - key: required 
+        - key: class
+          value: intersection-input
+    - prompt: _(Are there stop signs?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes, two way stop signs)
+          value: twoway
+        - label: _(Yes, all way stop signs)
+          value: allway                      
+        - label: _(No)
+          value: no  
+      name: intersection_stopsigns
+      attrs:
+        - key: required 
+        - key: class
+          value: intersection-input
+    - prompt: _(Are there traffic lights and/or pedestrian crossing signals?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes, traffic lights only)
+          value: lights  
+        - label: _(Yes, pedestrian crossing signals only)
+          value: pedsignals        
+        - label: _(Yes, traffic lights and pedestrian crossing signals)
+          value: lights_pedsignals
+        - label: _(No)
+          value: no                            
+      name: intersection_lightspedsignals
+      attrs:
+        - key: required 
+        - key: class
+          value: intersection-input
+    - prompt: _(Are drivers generally obeying stop signs?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no     
+      name: intersection_drivers_stopsigns
+      attrs:
+        - key: required    
+        - key: class
+          value: intersection-input
+    - prompt: _(Are drivers generally following speed limits?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no     
+      name: intersection_drivers_speed
+      attrs:
+        - key: required
+        - key: class
+          value: intersection-input
+    - prompt: _(Are drivers generally yielding to pedestrians?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no     
+      name: intersection_drivers_yield
+      attrs:
+        - key: required    
+        - key: class
+          value: intersection-input         
+    - prompt: _(Roughly how many pedestrians do you see?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(1-5)
+          value: 1-5
+        - label: _(6-15)
+          value: 6-15
+        - label: _(16+)
+          value: 16+
+        - label: _(None)
+          value: None
+      name: intersection_numpeds
+      attrs:
+        - key: required     
+        - key: class
+          value: intersection-input   
+
+# Street Questions
+    - prompt: _(What type of sidewalk?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(No sidewalk)
+          value: no_sidewalk
+        - label: _(Less than 2 feet attached)
+          value: less_2ft_attached
+        - label: _(2-3 feet attached)
+          value: 2to3_attached
+        - label: _(5 ft attached)
+          value: 5_attached
+      name: street_type
+      attrs:
+        - key: required     
+        - key: class
+          value: street-input 
+    - prompt: _(Are there obstructions in the sidewalk?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no       
+      name: street_obst
+      attrs:
+        - key: required     
+        - key: class
+          value: street-input 
+    - prompt: _(Is the sidewalk significantly cracked or uneven?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no       
+      name: street_crack
+      attrs:
+        - key: required     
+        - key: class
+          value: street-input
+    - prompt: _(Do you feel unsafe because of poor visibility or lighting?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no       
+      name: street_light
+      attrs:
+        - key: required     
+        - key: class
+          value: street-input
+    - prompt: _(Do you feel unsafe because of a high volume or high speed traffic?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(Yes)
+          value: yes
+        - label: _(No)
+          value: no       
+      name: street_traffic
+      attrs:
+        - key: required     
+        - key: class
+          value: street-input
+    - prompt: _(Are there other safety concerns?)
+      type: text
+      name: street_safety
+      attrs:
+        - key: placeholder
+          value: _(run-down buildings, etc)
+        - key: size
+          value: 30  
+        - key: class
+          value: street-input
+# Common Fields   
+    - prompt: _(How would you rate the pedestrian quality overall?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(1)
+          value: 1
+        - label: _(2)
+          value: 2
+        - label: _(3)
+          value: 3
+        - label: _(4)
+          value: 4
+        - label: _(5)
+          value: 5 
+        - label: _(6)
+          value: 6
+        - label: _(7)
+          value: 7
+        - label: _(8)
+          value: 8
+        - label: _(9)
+          value: 9
+        - label: _(10)
+          value: 10  
+      attrs:
+        - key: class
+          value: opt-input      
+    - prompt: _(Image)
+      inputfile_label: _(Add an Image)
+      type: file
+      name: my_image
+      optional: true
+      attrs:
+        - key: accept
+          value: image/*
+        - key: class
+          value: opt-input
+    - prompt: _(Description)
+      type: textarea
+      name: description
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(If you like, describe the location...)
+        - key: size
+          value: 280
+        - key: class
+          value: opt-input
     - prompt: _(Email)
       type: text
       name: submitter_email
@@ -244,21 +547,8 @@ place:
           value: _(Email)
         - key: size
           value: 30
-    - prompt: _(Description)
-      type: textarea
-      name: description
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(If you like, describe the location...)
-    - prompt: _(Image)
-      inputfile_label: _(Add an Image)
-      type: file
-      name: my_image
-      optional: true
-      attrs:
-        - key: accept
-          value: image/*
+        - key: class
+          value: opt-input
 
 survey:
   submission_type: comments
