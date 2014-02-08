@@ -80,26 +80,26 @@ place_types:
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/marker-focused-pumpkin.png
+          iconUrl: /static/css/images/marker-focused-pumpkin.png
           shadowUrl: /static/css/images/marker-shadow.png
-          # iconSize: [25, 41]
-          #shadowSize: [41, 41]
-          # iconAnchor: [12, 41]
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
 
         # ...and parks that are polygons as shapes.
 
-        style:
-          color: '#4bbd45'
-          radius: 8
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 0.4
-        focus_style:
-          color: '#4bbd45'
-          radius: 16
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 0.4
+        # style:
+          # color: '#4bbd45'
+          # radius: 8
+          # weight: 1
+          # opacity: 0.9
+          # fillOpacity: 0.4
+        # focus_style:
+          # color: '#4bbd45'
+          # radius: 16
+          # weight: 1
+          # opacity: 0.9
+          # fillOpacity: 0.4
 
   street:
     label: _(Street Quality)
@@ -111,7 +111,7 @@ place_types:
           iconSize: [17, 18]
           iconAnchor: [9, 9]
         focus_icon:
-          iconUrl: /static/css/marker-focused-navy.png
+          iconUrl: /static/css/images/marker-focused-navy.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -177,8 +177,8 @@ place:
 # Ped Count
     - prompt: _(How many people excluding you are currently on this street segment)
       type: text
-      name: num_peds
-      optional: false
+      name: Number of Peds
+      response_name: Number of Pedestrians
       attrs:
         - key: placeholder
           value: _(Number of Peds)
@@ -186,20 +186,21 @@ place:
           value: 15
         - key: class
           value: peds-input
+        - key: class
+          value: _(Number of Pedestrians)
     - prompt: _(What's the temperature like?)
       type: select
       options:
         - label: _(...)
           value: ''
         - label: _(Warm (80° or more))
-          value: warm
-        - label: _(Mild (40-80°))
-          value: mild
-        - label: _(Cold (40°or less))
-          value: cold
-      name: temp
+          value: Warm
+        - label: _(Mild (40-79°))
+          value: Mild
+        - label: _(Cold (39°or less))
+          value: Cold
+      name: Temperature
       attrs:
-        - key:  required
         - key: class
           value: peds-input
     - prompt: _(Is it raining or snowing?)
@@ -208,14 +209,13 @@ place:
         - label: _(...)
           value: ''
         - label: _(Raining)
-          value: raining
+          value: Raining
         - label: _(Snowing)
-          value: snowing
+          value: Snowing
         - label: _(Neither)
-          value: neither
-      name: precip
+          value: None
+      name: Precipitation
       attrs:
-        - key: required
         - key: class
           value: peds-input
     - prompt: _(How long did you observe this street segment?)
@@ -233,13 +233,12 @@ place:
           value: 45-60
         - label: _(More than 60 minutes)
           value: 60+           
-      name: duration
+      name: Time Observed
       attrs:
-        - key: required
         - key: class
           value: peds-input
 # Intersection Quality 
-    - prompt: _(How many lanes are there to cross (see tips)?)
+    - prompt: _(How many lanes are there to cross?)
       type: select
       options:
         - label: _(...)
@@ -272,40 +271,38 @@ place:
           value: 13                     
         - label: _(14)
           value: 14  
-      name: num_lanes
+      name: Number of Lanes
       attrs:
-        - key: required
         - key: class
           value: intersection-input
     - prompt: _(Are there painted crosswalks?)
       type: select
+      name: Crosswalks?
       options:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes
         - label: _(No)
-          value: no     
+          value: No     
       attrs:
-        - key: required
         - key: class
           value: intersection-input                 
     - prompt: _(Are there median islands or bulb-outs?)
       type: select
-      options:
+      name: Median Islands or Bulb-outs?
+      options: 
         - label: _(...)
           value: ''
         - label: _(Yes, median islands)
-          value: medianislands
+          value: Yes median islands
         - label: _(Yes, bulb-outs)
-          value: bulbouts                      
+          value: Yes bulb outs                      
         - label: _(Yes, Both)
-          value: both 
+          value: Yes both 
         - label: _(No)
-          value: no   
-      name: intersection_islands
-      attrs:
-        - key: required 
+          value: None
+      attrs: 
         - key: class
           value: intersection-input
     - prompt: _(Are there stop signs?)
@@ -314,14 +311,13 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes, two way stop signs)
-          value: twoway
+          value: Yes two-way stop
         - label: _(Yes, all way stop signs)
-          value: allway                      
+          value: Yes all-way stop                      
         - label: _(No)
-          value: no  
-      name: intersection_stopsigns
+          value: None  
+      name: Stop Signs?
       attrs:
-        - key: required 
         - key: class
           value: intersection-input
     - prompt: _(Are there traffic lights and/or pedestrian crossing signals?)
@@ -330,16 +326,15 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes, traffic lights only)
-          value: lights  
+          value: Traffic lights  
         - label: _(Yes, pedestrian crossing signals only)
-          value: pedsignals        
+          value: Crossing signals        
         - label: _(Yes, traffic lights and pedestrian crossing signals)
-          value: lights_pedsignals
+          value: Both
         - label: _(No)
-          value: no                            
-      name: intersection_lightspedsignals
+          value: None                          
+      name: Traffic Lights or Crossing Signals?
       attrs:
-        - key: required 
         - key: class
           value: intersection-input
     - prompt: _(Are drivers generally obeying stop signs?)
@@ -348,12 +343,11 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes
         - label: _(No)
-          value: no     
-      name: intersection_drivers_stopsigns
-      attrs:
-        - key: required    
+          value: No     
+      name: Drivers Obeying Stop Signs?
+      attrs:   
         - key: class
           value: intersection-input
     - prompt: _(Are drivers generally following speed limits?)
@@ -362,12 +356,11 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes
         - label: _(No)
-          value: no     
-      name: intersection_drivers_speed
+          value: No     
+      name: Drivers Following Speed Limits?
       attrs:
-        - key: required
         - key: class
           value: intersection-input
     - prompt: _(Are drivers generally yielding to pedestrians?)
@@ -376,12 +369,11 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes
         - label: _(No)
-          value: no     
-      name: intersection_drivers_yield
-      attrs:
-        - key: required    
+          value: No     
+      name: Drivers Yielding to Peds?
+      attrs:  
         - key: class
           value: intersection-input         
     - prompt: _(Roughly how many pedestrians do you see?)
@@ -397,9 +389,8 @@ place:
           value: 16+
         - label: _(None)
           value: None
-      name: intersection_numpeds
-      attrs:
-        - key: required     
+      name: Approx Number of Pedestrians
+      attrs:   
         - key: class
           value: intersection-input   
 
@@ -410,16 +401,17 @@ place:
         - label: _(...)
           value: ''
         - label: _(No sidewalk)
-          value: no_sidewalk
+          value: No Sidewalk
         - label: _(Less than 2 feet attached)
-          value: less_2ft_attached
+          value: Less than 2 feet attached
         - label: _(2-3 feet attached)
-          value: 2to3_attached
+          value: 2-3 feet attached
         - label: _(5 ft attached)
-          value: 5_attached
-      name: street_type
-      attrs:
-        - key: required     
+          value: 5 ft attached
+        - label: _(5 ft detached)
+          value: 5 ft detached
+      name: Sidewalk Type
+      attrs:   
         - key: class
           value: street-input 
     - prompt: _(Are there obstructions in the sidewalk?)
@@ -428,12 +420,11 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes.
         - label: _(No)
-          value: no       
-      name: street_obst
-      attrs:
-        - key: required     
+          value: No.       
+      name: Sidewalk Obstructions?
+      attrs:   
         - key: class
           value: street-input 
     - prompt: _(Is the sidewalk significantly cracked or uneven?)
@@ -442,12 +433,11 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes.
         - label: _(No)
-          value: no       
-      name: street_crack
-      attrs:
-        - key: required     
+          value: No.       
+      name: Sidewalks Uneven or Cracked?
+      attrs:    
         - key: class
           value: street-input
     - prompt: _(Do you feel unsafe because of poor visibility or lighting?)
@@ -456,12 +446,11 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes.
         - label: _(No)
-          value: no       
-      name: street_light
-      attrs:
-        - key: required     
+          value: No.       
+      name: Unsafe Due to Lighting?
+      attrs:   
         - key: class
           value: street-input
     - prompt: _(Do you feel unsafe because of a high volume or high speed traffic?)
@@ -470,17 +459,16 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: yes
+          value: Yes.
         - label: _(No)
-          value: no       
-      name: street_traffic
-      attrs:
-        - key: required     
+          value: No.       
+      name: Unsafe Due to Traffic?
+      attrs:   
         - key: class
           value: street-input
     - prompt: _(Are there other safety concerns?)
       type: text
-      name: street_safety
+      name: Other Safety Concerns
       attrs:
         - key: placeholder
           value: _(run-down buildings, etc)
@@ -491,6 +479,7 @@ place:
 # Common Fields   
     - prompt: _(How would you rate the pedestrian quality overall?)
       type: select
+      name: Overall Pedestrian Quality
       options:
         - label: _(...)
           value: ''
@@ -540,7 +529,7 @@ place:
           value: opt-input
     - prompt: _(Email)
       type: text
-      name: submitter_email
+      name: private-submitter_email
       optional: true
       attrs:
         - key: placeholder
@@ -549,7 +538,18 @@ place:
           value: 30
         - key: class
           value: opt-input
-
+    - prompt: _(Your Name)
+      type: text
+      name: submitter_name
+      optional: true
+      attrs:
+        - key: placeholder
+          value: _(Name)
+        - key: size
+          value: 30
+        - key: class
+          value: opt-input
+          
 survey:
   submission_type: comments
 

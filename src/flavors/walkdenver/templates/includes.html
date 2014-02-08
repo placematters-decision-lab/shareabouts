@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	$(function() {
-		$("#place-location_type").on('change', function() {
+        $(document).on('change', "#place-location_type", function() {
 			$('.peds-input,.street-input,.intersection-input,.opt-input').hide();
 			
 			if ( $(this).val() == "peds" ) {

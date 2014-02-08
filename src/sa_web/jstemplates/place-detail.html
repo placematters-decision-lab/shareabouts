@@ -26,12 +26,18 @@
             <img src="{{ file }}" class="place-value place-value-{{ name }}" alt="{{ name }}">
           </div>
           {{/ attachments }}
+          
           {{# items }}
           <div class="place-item place-item-{{ name }}">
-            <span class="place-label place-label-{{ name }}">{{ label }}</span>
-            <p class="place-value place-value-{{ name }}">{{ value }}</p>
+          <p class="place-detail">	
+          {{#if value}}
+            <span class="place-label place-label-{{ name }}">{{ name }}</span>:
+            <span class="place-value place-value-{{ name }}">{{ value }}</span>
+          </p>
           </div>
+          {{/if}}
           {{/ items }}
+          <hr class="place-detail">
         </section>
 
         {{#if survey_config}}

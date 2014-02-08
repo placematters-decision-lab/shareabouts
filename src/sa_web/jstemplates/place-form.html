@@ -32,8 +32,10 @@
                 {{#is_submitter_name}}
                   {{#is_authenticated}}
                   {{^}}
-                    <span class="or-sign-in">or sign in with <!-- <a class="#" --><a href="/users/login/twitter/">Twitter</a> or <!-- <a class="auth-inline facebook-btn" --><a href="/users/login/facebook/">Facebook</a></span>
                     <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}} style="width:140px;">
+                    <br>
+                    <span class="or-sign-in">or sign in with <!-- <a class="#" --><a href="/users/login/twitter/">Twitter</a> or <!-- <a class="auth-inline facebook-btn" --><a href="/users/login/facebook/">Facebook</a></span>
+
                   {{/is_authenticated}}
                 {{^}}
                   <input id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
@@ -84,7 +86,7 @@
               {{#is_textarea}}
              <!-- <td></td>
               </tr><tr> -->
-              <textarea id="place-{{ name }}" name="{{ name }}"{{#attrs}} {{ key }}="{{ value }}"{{/attrs}}></textarea>
+              <textarea id="place-{{ name }}" name="{{ name }}"{{#attrs}} {{ key }}="{{ value }}" {{ key }}="{{ title }}"{{/attrs}}></textarea>
              <!-- </td>
 			  </tr> -->
               {{/is_textarea}}

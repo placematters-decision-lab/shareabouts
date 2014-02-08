@@ -38,4 +38,12 @@ input[type="text"].opt-input,label.opt-input, select.opt-input,tr.opt-input {
 input[type="text"].street-input,label.street-input, select.street-input,tr.street-input {
 	display: none;
 }
-		
+
+p.place-detail {
+		font-size: 80%;
+}	
+
+hr.place-detail {
+  margin: .5em 0 1.5em;
+  stroke-color: 0.15em solid #a3c7d9;
+}
