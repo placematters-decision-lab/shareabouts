@@ -11,7 +11,7 @@
         </strong>
 
         {{#if is_place }}
-          {{ action }} a{{#if place.type_starts_with_vowel }}n{{/if }} <span class="place-type">{{ place.place_type_label }}</span>
+          added a{{#if place.type_starts_with_vowel }}n{{/if }} <span class="place-type">{{ place.place_type_label }} report</span>
           {{#if place.name }} named <span class="place-name">{{ place.name }}</span>{{/if }}
         {{else}}
           {{ action }}

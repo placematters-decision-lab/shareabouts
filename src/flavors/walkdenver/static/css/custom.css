@@ -47,3 +47,22 @@ hr.place-detail {
   margin: .5em 0 1.5em;
   stroke-color: 0.15em solid #a3c7d9;
 }
+
+p.legend-text {
+	padding-left: .5em;
+	color: #eee;
+	font-size: 80%;
+}
+span.legend-text {
+	padding-bottom: .25em;
+}
+h4.legend {
+	padding-top: .25em;
+	padding-left: .35em;
+	color: #eee;
+}
+
+p.legendbox {
+	/*margin-bottom: 2em;*/
+	border-bottom: 1.5px solid #666;
+}

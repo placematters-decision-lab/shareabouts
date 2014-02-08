@@ -40,7 +40,7 @@ map:
 # The values map the place type to map icons (defined below).
 place_types:
   peds:
-    label: _(Pedestrian Counts)
+    label: _(Pedestrian Count)
     rules:
       - condition: '"{{location_type}}" === "peds"'
         # Display landmarks as icons
