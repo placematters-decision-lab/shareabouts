@@ -66,3 +66,41 @@ p.legendbox {
 	/*margin-bottom: 2em;*/
 	border-bottom: 1.5px solid #666;
 }
+
+h5.tips {
+	margin-top: 2em
+}
+p.tips {
+	font-size: 80%;
+	font-weight: 500;
+	margin-top: 1em;
+	margin-bottom: 0em;
+}
+
+span.tips {
+	font-size: 80%;
+	font-weight: 200;
+}
+
+img.logos {
+	max-height:75px;
+	max-width: 250px;
+
+}
+
+.imglogos {
+	text-align: center;
+	margin-top: .5em;
+
+}
+
+p.why {
+	font-size: 80%;
+}
+
+span.numbers {
+	font-family: 'Monda', sans-serif;
+ 	font-weight: 500;
+ 	font-size: 1.4em;
+ 	color:#4C9BEB;
+}

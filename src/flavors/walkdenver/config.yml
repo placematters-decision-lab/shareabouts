@@ -102,7 +102,7 @@ place_types:
           # fillOpacity: 0.4
 
   street:
-    label: _(Street Quality)
+    label: _(Sidewalk Quality)
     rules:
       - condition: '"{{location_type}}" === "street"'
  
@@ -167,7 +167,7 @@ place:
           value: ''
         - label: _(Number of Pedestrians)
           value: peds
-        - label: _(Street Quality)
+        - label: _(Sidewalk Quality)
           value: street
         - label: _(Intersection Quality)
           value: intersection
@@ -255,22 +255,8 @@ place:
           value: 5 
         - label: _(6)
           value: 6
-        - label: _(7)
+        - label: _(7 or more)
           value: 7
-        - label: _(8)
-          value: 8
-        - label: _(9)
-          value: 9
-        - label: _(10)
-          value: 10  
-        - label: _(11)
-          value: 11
-        - label: _(12)
-          value: 12
-        - label: _(13)
-          value: 13                     
-        - label: _(14)
-          value: 14  
       name: Number of Lanes
       attrs:
         - key: class
@@ -282,9 +268,9 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: Yes
+          value: Yes.
         - label: _(No)
-          value: No     
+          value: No.     
       attrs:
         - key: class
           value: intersection-input                 
@@ -343,9 +329,9 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: Yes
+          value: Yes.
         - label: _(No)
-          value: No     
+          value: No.     
       name: Drivers Obeying Stop Signs?
       attrs:   
         - key: class
@@ -356,9 +342,9 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: Yes
+          value: Yes.
         - label: _(No)
-          value: No     
+          value: No.     
       name: Drivers Following Speed Limits?
       attrs:
         - key: class
@@ -369,9 +355,9 @@ place:
         - label: _(...)
           value: ''
         - label: _(Yes)
-          value: Yes
+          value: Yes.
         - label: _(No)
-          value: No     
+          value: No.     
       name: Drivers Yielding to Peds?
       attrs:  
         - key: class
@@ -393,7 +379,6 @@ place:
       attrs:   
         - key: class
           value: intersection-input   
-
 # Street Questions
     - prompt: _(What type of sidewalk?)
       type: select
@@ -406,9 +391,9 @@ place:
           value: Less than 2 feet attached
         - label: _(2-3 feet attached)
           value: 2-3 feet attached
-        - label: _(5 ft attached)
+        - label: _(5 ft or more attached)
           value: 5 ft attached
-        - label: _(5 ft detached)
+        - label: _(5 ft or more detached)
           value: 5 ft detached
       name: Sidewalk Type
       attrs:   
@@ -477,9 +462,9 @@ place:
         - key: class
           value: street-input
 # Common Fields   
-    - prompt: _(How would you rate the pedestrian quality overall?)
+    - prompt: _(How would you rate the pedestrian environment overall? 1-10, 10=highest)
       type: select
-      name: Overall Pedestrian Quality
+      name: Overall Score
       options:
         - label: _(...)
           value: ''
@@ -518,7 +503,7 @@ place:
           value: opt-input
     - prompt: _(Description)
       type: textarea
-      name: description
+      name: Description
       optional: true
       attrs:
         - key: placeholder
