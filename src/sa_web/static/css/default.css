@@ -1071,14 +1071,13 @@ a.close-unsupported-overlay {
   	margin: 0 0 0 0.5em;
   }
   #sign-in-btn {
-    display: none;
-    /*font-size: 1em;
+    font-size: .8em;
     text-decoration: none;
     line-height: 1.5;
     padding: 0.5em;
     margin: 0.75em 0.75em 0 0.75em;
     position: relative;
-    z-index: 3;*/
+    z-index: 3;
   }
   .sign-in-menu {
     background: #666;

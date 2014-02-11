@@ -175,7 +175,7 @@ place:
       attrs:
         - key: required
 # Ped Count
-    - prompt: _(How many people excluding you are currently on this street segment)
+    - prompt: _(How many pedestrians did you count on this street segment?)
       type: text
       name: Number of Peds
       response_name: Number of Pedestrians
@@ -362,7 +362,7 @@ place:
       attrs:  
         - key: class
           value: intersection-input         
-    - prompt: _(Roughly how many pedestrians do you see?)
+    - prompt: _(Roughly how many pedestrians do you see near the intersection?)
       type: select
       options:
         - label: _(...)
@@ -380,6 +380,23 @@ place:
         - key: class
           value: intersection-input   
 # Street Questions
+   - prompt: _(Are there obstructions in the sidewalk?)
+      type: select
+      options:
+        - label: _(...)
+          value: ''
+        - label: _(North)
+          value: North
+        - label: _(South)
+          value: South    
+        - label: _(East)
+          value: East
+        - label: _(West)
+          value: West    
+      name: Street Side
+      attrs:   
+        - key: class
+          value: street-input 
     - prompt: _(What type of sidewalk?)
       type: select
       options:
@@ -389,12 +406,13 @@ place:
           value: No Sidewalk
         - label: _(Less than 2 feet attached)
           value: Less than 2 feet attached
-        - label: _(2-3 feet attached)
-          value: 2-3 feet attached
+        - label: _(Less than 5 feet attached)
+          value: Less than 5 feet attached
         - label: _(5 ft or more attached)
-          value: 5 ft attached
+          value: 5 ft or more attached
         - label: _(5 ft or more detached)
-          value: 5 ft detached
+          value: 5 ft or more detached
+        - label: 
       name: Sidewalk Type
       attrs:   
         - key: class
