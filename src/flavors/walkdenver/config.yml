@@ -412,7 +412,6 @@ place:
           value: 5 ft or more attached
         - label: _(5 ft or more detached)
           value: 5 ft or more detached
-        - label: 
       name: Sidewalk Type
       attrs:   
         - key: class
