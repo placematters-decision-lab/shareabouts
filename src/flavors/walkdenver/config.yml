@@ -380,7 +380,7 @@ place:
         - key: class
           value: intersection-input   
 # Street Questions
-    - prompt: _(Are there obstructions in the sidewalk?)
+    - prompt: _(What side of the street are you recording?)
       type: select
       options:
         - label: _(...)
