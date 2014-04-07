@@ -1,7 +1,7 @@
 # Settings for the app
 app:
   # HTML Title
-  title: WALKscope Denver
+  title: WALKscope OSU
   # Header name
   name: WALKscope
   # Meta description that will show up in Google search results
@@ -18,12 +18,12 @@ map:
   geolocation_onload: false
   options:
     center:
-      lat: 39.737567
-      lng: -104.984718
+      lat: 40.005396
+      lng: -83.02793
     zoom: 14
     minZoom: 10
-    maxZoom: 17
-    maxBounds: [ [39.618913,-105.086975], [39.797986, -104.792404] ]
+    maxZoom: 20
+    #maxBounds: [ [39.618913,-105.086975], [39.797986, -104.792404] ]
   layers:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
