@@ -39,10 +39,9 @@ input[type="text"].street-input,label.street-input, select.street-input,tr.stree
 	display: none;
 }
 
-p.place-detail {
+/*p.place-detail {
 		font-size: 80%;
-}	
-
+}	*/
 hr.place-detail {
   margin: .5em 0 1.5em;
   stroke-color: 0.15em solid #a3c7d9;
@@ -51,7 +50,7 @@ hr.place-detail {
 p.legend-text {
 	padding-left: .5em;
 	color: #eee;
-	font-size: 80%;
+	font-size: 90%;
 }
 span.legend-text {
 	padding-bottom: .25em;
@@ -71,14 +70,14 @@ h5.tips {
 	margin-top: 2em
 }
 p.tips {
-	font-size: 80%;
+	/*font-size: 80%;*/
 	font-weight: 500;
 	margin-top: 1em;
 	margin-bottom: 0em;
 }
 
 span.tips {
-	font-size: 80%;
+	/*font-size: 80%;*/
 	font-weight: 200;
 }
 
@@ -95,7 +94,7 @@ img.logos {
 }
 
 p.why {
-	font-size: 80%;
+	/*font-size: 80%;*/
 }
 
 span.numbers {

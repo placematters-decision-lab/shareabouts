@@ -269,7 +269,7 @@ img {
   background-color: #777;
   position: relative;
   z-index: 40;
-  padding: 0.5em;
+  padding: 0em;
   box-shadow: 0 0.325em 0 rgba(0,0,0,0.1);
 }
 #site-title {
@@ -284,7 +284,7 @@ img {
 }
 
 #site-logo {
-  height: 64px;
+  height: 79px;
 }
 
 #donate {
