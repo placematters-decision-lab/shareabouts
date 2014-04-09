@@ -282,6 +282,18 @@ img {
   margin: 0 0.5em 0 0;
   padding: 0;
 }
+
+#site-logo {
+  height: 64px;
+}
+
+#donate {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  
+}
+
 .has-pages #site-title {
   padding-left: 3.25em;
 }

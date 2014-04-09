@@ -590,6 +590,6 @@ pages:
     slug: tips
     url: /static/pages/tips.html
 
-  # - title: _(GitHub)
-    # external: true
-    # url: https://github.com/openplans/shareabouts
+  - title: _(Donate)
+    slug: donate
+    url: /static/pages/donate.html

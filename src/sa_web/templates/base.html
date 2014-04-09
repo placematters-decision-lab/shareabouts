@@ -57,8 +57,10 @@
   <header id="site-header" class="clearfix{% if pages_config %} has-pages{% endif %}">
     <h1 id="site-title">{% block site-title %}{% endblock %}</h1>
     <div id="auth-nav-container"></div>
+    
     <div id="pages-nav-container"></div>
-
+	    <div class="list-toggle-nav">
+    </div>
     {% if config.languages %}
     <div id="language-picker">
       <nav class="access" role="article">
@@ -79,12 +81,11 @@
             </form>
           </li>
         </ul>
+       
       </nav>
     </div> <!-- .language-picker -->
     {% endif %}
-
   </header>
-
   <div class="unsupported-overlay"></div>
 
   <div role="main" id="main">
