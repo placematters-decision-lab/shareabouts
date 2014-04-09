@@ -405,6 +405,8 @@ place:
           value: ''
         - label: _(No sidewalk)
           value: No Sidewalk
+        - label: _(Less than 5 feet no curb)
+          value: Less than 5 feet no curb
         - label: _(Less than 5 feet attached)
           value: Less than 5 feet attached
         - label: _(Less than 5 feet detached)
